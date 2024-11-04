@@ -103,14 +103,14 @@ const updateShareCount = async(req,res) =>{
     // Increment the share count
     mediaItem.shareCount = (mediaItem.shareCount || 0) + 1;
 
-    const shareableLink = `${BASE_URL}/api/get/${fileId}`; // Adjust to your actual path
+    const shareableLink = `${BASE_URL}/api/get/${fileId}`; 
 
     // Save the updated media item
     await mediaItem.save();
 
     const responseObject = {
       mediaItem: {
-        ...JSON.parse(JSON.stringify(mediaItem)), // Ensures a fully plain object
+        ...JSON.parse(JSON.stringify(mediaItem)), 
         link: shareableLink
       }
     };
@@ -124,7 +124,7 @@ const updateShareCount = async(req,res) =>{
 
 const getUploadedFile = async (req, res) => {
 
-  const fileId  = req.params.fileId; // Get fileId from the request parameters
+  const fileId  = req.params.fileId; 
 
 
   const file = await File.findById(fileId);
@@ -135,7 +135,7 @@ const getUploadedFile = async (req, res) => {
 
   
 
-  const filePath = path.join(__dirname, '../uploads', file.name); // Construct the full path to the file
+  const filePath = path.join(__dirname, '../uploads', file.name); 
 
   
 
@@ -146,7 +146,7 @@ const getUploadedFile = async (req, res) => {
     }
 
    // Determine the content type based on the file extension
-   const contentType = mime.contentType(path.extname(filePath)); // Use contentType instead of getType
+   const contentType = mime.contentType(path.extname(filePath)); 
 
    // Set the Content-Type header
    res.setHeader('Content-Type', contentType || 'application/octet-stream'); 

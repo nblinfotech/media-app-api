@@ -1,5 +1,3 @@
-// utils/tokenUtils.js
-
 const jwt = require('jsonwebtoken');
 
 // Generate tokens

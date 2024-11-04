@@ -1,5 +1,3 @@
-// routes/fileRoutes.js
-
 const express = require('express');
 const { uploadFile, getFileStatistics, incrementFileViews,getUserFiles,updateShareCount,getUploadedFile } = require('../controllers/fileController');
 const authMiddleware = require('../middlewares/authMiddleware');

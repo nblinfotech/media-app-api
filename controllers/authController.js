@@ -2,7 +2,7 @@
 
 const User = require('../models/User');
 const bcrypt = require('bcrypt');
-const { generateTokens } = require('../utils/tokenUtils'); // Import the utility function
+const { generateTokens } = require('../utils/tokenUtils'); 
 
 // User registration
 const registerUser = async (req, res) => {
@@ -125,5 +125,5 @@ const refreshToken = async (req, res) => {
 module.exports = {
   registerUser,
   loginUser,
-  refreshToken, // Export the new function
+  refreshToken, 
 };

@@ -8,7 +8,7 @@ const fileSchema = new mongoose.Schema({
   tags: { type: [String], default: [] },
   fileType: { type: String, required: true },
   shareCount: {type: Number,default: 0},
-  userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true }, // Reference to the User model
+  userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
   views: { type: Number, default: 0 },
 });
 
